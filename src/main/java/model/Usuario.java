@@ -10,44 +10,33 @@ import java.util.Date;
  *
  * @author Alberth
  */
-public class Cliente {
-    
+public class Usuario {
     private int id;
     private String nome;
+    private String senha;
+    private String nivelAcesso;
     private char sexo;
     private Date dataNascimento;
     private String telefone;
     private String email;
     private String rg;
-    private String endereco;
-    private String cep;
 
-    public Cliente(int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg, String endereco, String cep) {
+    public Usuario(int id, String nome, String senha, String nivelAcesso, char sexo, Date dataNascimento, String telefone, String email, String rg) {
         this.id = id;
         this.nome = nome;
+        this.senha = senha;
+        this.nivelAcesso = nivelAcesso;
         this.sexo = sexo;
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
         this.email = email;
         this.rg = rg;
-        this.endereco = endereco;
-        this.cep = cep;
     }
 
-    public Cliente(int id, String nome, char sexo, String telefone, String endereco) {
+    public Usuario(int id, String nome, String senha) {
         this.id = id;
         this.nome = nome;
-        this.sexo = sexo;
-        this.telefone = telefone;
-        this.endereco = endereco;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.senha = senha;
     }
 
     public String getNome() {
@@ -56,6 +45,22 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getNivelAcesso() {
+        return nivelAcesso;
+    }
+
+    public void setNivelAcesso(String nivelAcesso) {
+        this.nivelAcesso = nivelAcesso;
     }
 
     public char getSexo() {
@@ -97,22 +102,6 @@ public class Cliente {
     public void setRg(String rg) {
         this.rg = rg;
     }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-    
+   
     
 }
